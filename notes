@@ -1,11 +1,25 @@
 {{{fedora + Virtual Box
 
-
+- enable ssh from local windows host
 sudo systemctl enable sshd.service
+( In Virtual Box -> Setting-> Network -> Port Forwarding, add TCP rule,
+   HOst IP : 127.0.0.1, Host Port : 3022, Guest IP : 10.0.2.15, Guest Port : 22
+)
+
+    
 
 sudo vi /etc/dnf/dnf.conf 
     - add  'fastestmirror=true'
 
 systemd-analyze blame  (check services at startup time)
+
+
+Change run-level to NoGUI
+ln -fs /lib/systemd/system/multi-user.target /etc/systemd/system/default.target
+
+Change run-level to GUI
+ln -fs /lib/systemd/system/graphical.target /etc/systemd/system/default.target
+
+
 
 }}}
