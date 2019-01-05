@@ -1,0 +1,11 @@
+{{{fedora + Virtual Box
+
+
+sudo systemctl enable sshd.service
+
+sudo vi /etc/dnf/dnf.conf 
+    - add  'fastestmirror=true'
+
+systemd-analyze blame  (check services at startup time)
+
+}}}
