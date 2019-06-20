@@ -41,3 +41,15 @@ jupyter notebook
 
 
 }}}
+
+{{{ python
+
+virtual env :
+   python3 -m venv notebook
+   this will create a new directory 'notebook', cd there, and source bin/activate, and you can pip install new package there
+
+
+
+}}}
+
+
