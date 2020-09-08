@@ -1,3 +1,16 @@
+{{{centos
+change kernel boot parameter
+
+vi /etc/default/grub
+grub2-mkconfig -o /boot/grub2/grub.cfg
+vi /boot/grub2/grub.cfg
+reboot
+
+}}}
+
+
+
+
 {{{fedora + Virtual Box
 
 - enable ssh from local windows host
